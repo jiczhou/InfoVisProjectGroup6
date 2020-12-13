@@ -221,7 +221,7 @@ function draw(whichyear) {
     // ================================================================
     // ================================================================
     // visitors countries bargraph:  
-  // Create a band scale that returns the width of each bar - https://github.com/d3/d3-scale/blob/master/README.md#band_bandwidth
+  // Create a linear scale that returns the width of each bar - https://github.com/d3/d3-scale/blob/master/README.md#band_bandwidth
   var x2 = d3.scaleLinear()
   .range([0, barWidth2]);
 
@@ -246,7 +246,7 @@ var chart2 = svgMain.append("g")
     .append("g")
 //.attr("transform", "translate(" + barMargin2.left +  ")");
 
-
+//sort the data in descending order
 sorted_data = country_data_vis.slice().sort((a,b) => d3.descending(a.value, b.value));
 
 x2.domain([0, d3.max(sorted_data , function(d) { return d.value; })]);
@@ -263,6 +263,7 @@ yChart2 = chart2.append("g")
   .attr("transform", "translate(0," + barHeight2 + ")")
   .call(xAxis2);
 
+//create a horizontal bar cahrt
 var barChart2 =	chart2.selectAll(".bar")
     .data(sorted_data)
     .enter()
