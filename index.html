@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Population dynamics</title>
-    <link rel="stylesheet" href="styles.css">
-<script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
-    <script src="https://d3js.org/d3-zoom.v2.min.js"></script>
-    <script src="https://unpkg.com/topojson@3"></script>
-  </head>
-  <body>
-    <p>Population Dynamics of the Netherlands</p>
-    <!-- <ul>
-      <li>
-      	<button class="reset"></button>
-    	</li>
-      <li>
-      	<button class="changeOne" onclick=""></button>
-    	</li>
-      <li>
-      	<button class="changeTwo" onclick=""></button>
-    	</li>
-      <li>
-      	<button class="changeThree" onclick=""></button>
-    	</li>
-    </ul> -->
-    <svg width="1960" height="800"></svg>
-    <script src="bundle.js"></script>
-  </body>
-</html>
+<meta charset="utf-8">
+	
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Netherlands Map</title>
+</head>
+<body>
+<h1>Tourism of the Netherlands</h1>
+<h2>
+	<label for="year">Please select a year: 2015</label>
+	<input type="range" min=2015 max=2019 step=1 id="year" value=2019 oninput="selected_year.value = year.value">
+	<output name="selected_year" id="selected_year">2019</output>
+	</h2>
+<div id="slider"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//d3js.org/d3.v4.min.js" charset="utf-8"></script>
+<script src="//d3js.org/topojson.v1.min.js"></script>
+<script src="https://d3js.org/d3-color.v1.min.js"></script>
+<script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="map1.js"></script>
+<footer>
+  <p>Created by: </p>
+  <p>Data: <a href="https://opendata.cbs.nl/statline/portal.html?_la=nl&_catalog=CBS">
+  Centraal Bureau voor de Statistiek</a></p>
+  <p>Map Data: <a href="http://www.imergis.nl/asp/47.asp">
+  Imergis</a></p>
+</footer>
+</body>
