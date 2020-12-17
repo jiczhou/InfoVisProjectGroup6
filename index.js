@@ -96,7 +96,7 @@ function draw(whichyear) {
   barHeight2 = Math.min(screenHeight, 350) - barMargin2.top - barMargin2.bottom;
 
   var barMargin3 = {top: 20, right: 30, bottom: 65, left: 40},
-  barWidth3 = Math.min(screenWidth, 600) - barMargin3.left - barMargin3.right,
+  barWidth3 = Math.min(screenWidth, 450) - barMargin3.left - barMargin3.right,
   barHeight3 = Math.min(screenHeight, 350) - barMargin3.top - barMargin3.bottom;
   // =================
   // Set up the Map:
@@ -583,8 +583,6 @@ function draw(whichyear) {
     barChart2.attr("height", y2.bandwidth())
     xChart2.attr("class", "x baraxis")
     xChart2.call(yAxis2);
-
-  
 
     x3.domain(monthly_data_province.map(function(d) { return d.name; }));
     y3.domain([0, d3.max(monthly_data_province , function(d) { return d.value; })]);
